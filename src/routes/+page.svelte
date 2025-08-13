@@ -274,6 +274,7 @@
     .tooltip {
         position: relative;
         display: inline-block;
+        cursor: help;
     }
 
     .tooltip .tooltiptext {
@@ -307,6 +308,7 @@
 
     .visu_edit {
         margin-top: 2vh;
+        margin-bottom: 2vh;
 
         /* height: 96vh; */
         border: 2px solid black;
