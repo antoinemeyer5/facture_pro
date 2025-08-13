@@ -10,7 +10,7 @@
 </script>
 
 <svelte:head>
-	<title>FacturePro</title>
+	<title>Facture Pro</title>
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
