@@ -18,6 +18,7 @@
 	<a class="no_print" href="/"><button class="button"><h1>FacturePro</h1></button></a>
 	<div>
 		<a class="no_print" href="/devis_1"><button class="button">Devis (m²)</button></a>
+		<a class="no_print" href="/facture_3"><button class="button">Facture (m²)</button></a>
 		<a class="no_print" href="/facture_1"><button class="button">Facture (h)</button></a>
 		<a class="no_print" href="/facture_2"><button class="button">Facture (TVA)</button></a>
 	</div>
