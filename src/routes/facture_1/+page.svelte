@@ -180,9 +180,6 @@
     <div class="mt-30 ta-right">
         <p>Merci pour votre confiance.</p>
     </div>
-    <div class="mt-30 ta-right">
-        <p>Page 1 sur 1</p>
-    </div>
 </div>
 
 <div class="only_print visu_print width-65vw">
@@ -264,9 +261,6 @@
     </div>
     <div class="mt-30 ta-right">
         <p>Merci pour votre confiance.</p>
-    </div>
-    <div class="mt-30 ta-right">
-        <p>Page 1 sur 1</p>
     </div>
 </div>
 
