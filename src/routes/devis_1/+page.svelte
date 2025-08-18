@@ -111,8 +111,8 @@
                                 {/if}
                             {/each}</td
                         >
-                        <td>{task.du}h</td>
-                        <td>{task.c}€/h</td>
+                        <td>{task.du}m²</td>
+                        <td>{task.c}€/m²</td>
                         <td>{task.du * task.c}€</td>
                         <td>
                             <button
@@ -254,8 +254,8 @@
                                 {/if}
                             {/each}</td
                         >
-                        <td>{task.du}h</td>
-                        <td>{task.c}€/h</td>
+                        <td>{task.du}m²</td>
+                        <td>{task.c}€/m²</td>
                         <td>{task.du * task.c}€</td>
                     </tr>
                 {/each}
