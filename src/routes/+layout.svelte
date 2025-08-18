@@ -15,7 +15,7 @@
 </svelte:head>
 
 <div class="flex width-65vw ml-mr mt-5" style="justify-content: space-between;">
-	<h1 class="no_print">FacturePro</h1>
+	<a class="no_print" href="/"><button class="button"><h1>FacturePro</h1></button></a>
 	<div>
 		<a class="no_print" href="/devis_1"><button class="button">Devis (m²)</button></a>
 		<a class="no_print" href="/facture_1"><button class="button">Facture (h)</button></a>
