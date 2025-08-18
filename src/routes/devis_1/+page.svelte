@@ -139,7 +139,7 @@
                     <td
                         ><input
                             type="number"
-                            placeholder="durée"
+                            placeholder="surface"
                             bind:value={new_task.du}
                         /></td
                     >
