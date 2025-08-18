@@ -187,10 +187,10 @@
     <br />
     <br />
     <div class="mt-30 bold ta-right">
-        <p>Signature suivie de la mention "bon pour accord"</p>
+        <p>Signature suivie de la mention "bon pour accord".</p>
         <br />
         <br />
-        <p>__________________________________________</p>
+        <p>___________________________________________</p>
     </div>
     <br />
     <br />
@@ -286,10 +286,10 @@
     <br />
     <br />
     <div class="mt-30 bold ta-right">
-        <p>Signature suivie de la mention "bon pour accord"</p>
+        <p>Signature suivie de la mention "bon pour accord".</p>
         <br />
         <br />
-        <p>__________________________________________</p>
+        <p>___________________________________________</p>
     </div>
     <br />
     <br />
