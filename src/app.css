@@ -23,6 +23,20 @@ input:hover {
     cursor: pointer;
 }
 
+body {
+    width: 65vw;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    body {
+        width: 90vw;
+    }
+}
+
 /*************************************/
 
 .bold {
@@ -33,10 +47,6 @@ input:hover {
     display: flex;
 }
 
-.width-65vw {
-    width: 65vw;
-}
-
 .gap-5 {
     gap: 5px;
 }
@@ -44,11 +54,6 @@ input:hover {
 .mt-mb {
     margin-top: auto;
     margin-bottom: auto;
-}
-
-.ml-mr {
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .mt-5 {

@@ -14,7 +14,7 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="flex width-65vw ml-mr mt-5" style="justify-content: space-between;">
+<div class="flex  mt-5" style="justify-content: space-between;">
 	<a class="no_print" href="/"><button class="button"><h1>FacturePro</h1></button></a>
 	<div>
 		<a class="no_print" href="/devis_1"><button class="button">Devis (m²)</button></a>

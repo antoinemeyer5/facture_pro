@@ -48,7 +48,7 @@
     );
 </script>
 
-<div class="no_print visu_edit ml-mr width-65vw">
+<div class="no_print visu_edit ">
     <h3>Devis</h3>
     <div class="flex gap-5 mt-30">
         <p class="mt-mb">Devis n°</p>
@@ -201,7 +201,7 @@
     </div>
 </div>
 
-<div class="only_print visu_print width-65vw">
+<div class="only_print visu_print">
     <h3>Devis</h3>
     <div class="mt-30">
         <p>Devis n°{A != null ? A : "?"}</p>

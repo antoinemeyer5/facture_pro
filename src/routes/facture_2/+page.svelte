@@ -52,7 +52,7 @@
     let total_ttc = $derived(total + tva_10 + tva_20);
 </script>
 
-<div class="no_print visu_edit ml-mr width-65vw">
+<div class="no_print visu_edit  ">
     <div class="g-2">
         <p class="bold">Entreprise</p>
         <p class="bold">Client</p>
@@ -201,7 +201,7 @@
     </div>
 </div>
 
-<div class="only_print visu_print width-65vw">
+<div class="only_print visu_print ">
     <div class="g-2">
         <p class="bold">Entreprise</p>
         <p class="bold">Client</p>

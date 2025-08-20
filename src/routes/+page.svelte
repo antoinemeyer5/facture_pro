@@ -1,4 +1,4 @@
-<div class="no_print visu_edit ml-mr width-65vw">
+<div class="no_print visu_edit ">
     <p>Choisissez un type de document à générer : ⬆️</p>
 </div>
 
