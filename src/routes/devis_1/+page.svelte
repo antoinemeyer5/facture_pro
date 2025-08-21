@@ -51,13 +51,12 @@
 </script>
 
 <div class="no_print visu_edit ">
-    <h3>Devis</h3>
     <div class="flex gap-5 mt-30">
-        <p class="mt-mb">Devis n°</p>
+        <p class="mt-mb bold">Devis n°</p>
         <input type="number" placeholder="numéro" bind:value={A} />
     </div>
     <div class="flex gap-5 mt-30">
-        <p class="mt-mb bold">Date du devis :</p>
+        <p class="mt-mb bold">Date :</p>
         <input class="date" type="number" placeholder="jj" bind:value={E} />
         <p class="mt-mb">/</p>
         <input class="date" type="number" placeholder="mm" bind:value={F} />
@@ -65,10 +64,10 @@
         <input class="date" type="number" placeholder="aaaa" bind:value={G} />
     </div>
     <div class="gap-5 mt-30">
-        <p><b>Validité du devis :</b> <input class="date" type="number" placeholder="x" bind:value={G2} /> mois</p>
+        <p><b>Validité :</b> <input class="date" type="number" placeholder="x" bind:value={G2} /> mois</p>
     </div>
     <div class="flex gap-5 mt-30">
-        <p class="mt-mb bold">Référence du devis :</p>
+        <p class="mt-mb bold">Référence :</p>
         <input type="text" placeholder="description" bind:value={X} />
     </div>
     <div class="g-2 mt-30">
@@ -204,14 +203,13 @@
 </div>
 
 <div class="only_print visu_print">
-    <h3>Devis</h3>
     <div class="mt-30">
-        <p>Devis n°{A != null ? A : "?"}</p>
+        <p><b>Devis n°</b>{A != null ? A : "?"}</p>
     </div>
     <div class="mt-30">
-        <p><b>Date du devis :</b> {E}/{F > 9 ? F : "0" + F}/{G}</p>
-        <p><b>Validité du devis :</b> {G2} mois</p>
-        <p><b>Référence du devis :</b> {X != null ? X : "?"}</p>
+        <p><b>Date :</b> {E}/{F > 9 ? F : "0" + F}/{G}</p>
+        <p><b>Validité :</b> {G2} mois</p>
+        <p><b>Référence :</b> {X != null ? X : "?"}</p>
     </div>
     <div class="mt-30 g-2">
         <p class="bold">Entrepreneur</p>
