@@ -23,6 +23,8 @@
     let F: number = $state(today.getMonth() + 1);
     let G = $state(today.getFullYear());
 
+    let G2 = $state();
+
     let H = $state();
     let I = $state();
     let J = $state();
@@ -63,7 +65,7 @@
         <input class="date" type="number" placeholder="aaaa" bind:value={G} />
     </div>
     <div class="gap-5 mt-30">
-        <p><b>Validité du devis :</b> 2 mois</p>
+        <p><b>Validité du devis :</b> <input class="date" type="number" placeholder="x" bind:value={G2} /> mois</p>
     </div>
     <div class="flex gap-5 mt-30">
         <p class="mt-mb bold">Référence du devis :</p>
@@ -208,7 +210,7 @@
     </div>
     <div class="mt-30">
         <p><b>Date du devis :</b> {E}/{F > 9 ? F : "0" + F}/{G}</p>
-        <p><b>Validité du devis :</b> 2 mois</p>
+        <p><b>Validité du devis :</b> {G2} mois</p>
         <p><b>Référence du devis :</b> {X != null ? X : "?"}</p>
     </div>
     <div class="mt-30 g-2">
