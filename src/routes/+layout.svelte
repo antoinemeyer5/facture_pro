@@ -5,8 +5,8 @@
 	let { children } = $props();
 
 	function print() {
-        window.print();
-    }
+		window.print();
+	}
 </script>
 
 <svelte:head>
@@ -14,15 +14,22 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="flex  mt-5" style="justify-content: space-between;">
-	<a class="no_print" href="/"><button class="button"><h1>FacturePro</h1></button></a>
+<div class="flex mt-5 justify-content-space-between">
+	<a class="no_print" href="/"
+		><button class="buttonHeader"><h1>FacturePro</h1></button></a
+	>
 	<div>
-		<a class="no_print" href="/devis_1"><button class="button">Devis (m²)</button></a>
-		<a class="no_print" href="/facture_3"><button class="button">Facture (m²)</button></a>
-		<a class="no_print" href="/facture_1"><button class="button">Facture (h)</button></a>
-		<a class="no_print" href="/facture_2"><button class="button">Facture (TVA)</button></a>
+		<a class="no_print" href="/otrta"
+			><button class="buttonHeader">Facture/Devis sans TVA</button></a
+		>
+
+		<!--<a class="no_print" href="/facture_2"
+			><button class="button" disabled>Facture (TVA)</button></a
+		>-->
 	</div>
-	<button class="no_print button" onclick={print}> Téléchargez le PDF </button>
+	<button class="no_print buttonHeader" onclick={print}>
+		Téléchargez le PDF
+	</button>
 </div>
 
 {@render children?.()}
