@@ -15,6 +15,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Helvetica, sans-serif;
 }
 
 button:hover,
@@ -74,6 +75,10 @@ body {
 
 .ta-right {
     text-align: right;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
 }
 
 /*************************************/

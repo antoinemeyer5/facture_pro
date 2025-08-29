@@ -50,7 +50,23 @@
     );
 </script>
 
-<div class="no_print visu_edit ">
+<div class="no_print visu_edit">
+    <div class="g-2">
+        <p class="bold">Entrepreneur</p>
+        <p class="bold">Client</p>
+        <input type="text" placeholder="nom entreprise" bind:value={B} />
+        <input type="text" placeholder="nom client" bind:value={C} />
+        <input type="text" placeholder="adresse" bind:value={H} />
+        <input type="text" placeholder="adresse" bind:value={I} />
+        <input type="number" placeholder="siret" bind:value={J} />
+        <input type="text" placeholder="texte" bind:value={K} />
+        <input type="email" placeholder="email" bind:value={D} />
+        <input type="email" placeholder="email" bind:value={L} />
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
     <div class="flex gap-5 mt-30">
         <p class="mt-mb bold">Devis n°</p>
         <input type="number" placeholder="numéro" bind:value={A} />
@@ -64,30 +80,22 @@
         <input class="date" type="number" placeholder="aaaa" bind:value={G} />
     </div>
     <div class="gap-5 mt-30">
-        <p><b>Validité :</b> <input class="date" type="number" placeholder="x" bind:value={G2} /> mois</p>
+        <p>
+            <b>Validité :</b>
+            <input class="date" type="number" placeholder="x" bind:value={G2} />
+            mois
+        </p>
     </div>
     <div class="flex gap-5 mt-30">
         <p class="mt-mb bold">Référence :</p>
         <input type="text" placeholder="description" bind:value={X} />
-    </div>
-    <div class="g-2 mt-30">
-        <p class="bold">Entrepreneur</p>
-        <p class="bold">Client</p>
-        <input type="text" placeholder="nom entreprise" bind:value={B} />
-        <input type="text" placeholder="nom client" bind:value={C} />
-        <input type="text" placeholder="adresse" bind:value={H} />
-        <input type="text" placeholder="adresse" bind:value={I} />
-        <input type="number" placeholder="siret" bind:value={J} />
-        <input type="text" placeholder="texte" bind:value={K} />
-        <input type="email" placeholder="email" bind:value={D} />
-        <input type="email" placeholder="email" bind:value={L} />
     </div>
     <div class="mt-30">
         <table>
             <thead>
                 <tr>
                     <th
-                        >Description <div class="tooltip">
+                        >Désignation <div class="tooltip">
                             &#9432;
                             <span class="tooltiptext"
                                 >Ajoutez une virgule pour sauter une ligne. La
@@ -95,16 +103,16 @@
                             >
                         </div></th
                     >
-                    <th>Surface (m²)</th>
-                    <th>Coût surface (€/m²)</th>
-                    <th>Total (€)</th>
+                    <th>Quantité</th>
+                    <th>Unité</th>
+                    <th>Prix unitaire</th>
+                    <th>Montant</th>
                 </tr>
             </thead>
             <tbody>
                 {#each tasks as task, i}
                     <tr>
-                        <td class="left"
-                            >{#each task.de as d, j}
+                        <td>{#each task.de as d, j}
                                 {#if j == 0}
                                     <b>{d}</b>
                                 {:else}
@@ -112,9 +120,10 @@
                                 {/if}
                             {/each}</td
                         >
-                        <td>{task.du}m²</td>
-                        <td>{task.c}€/m²</td>
-                        <td>{task.du * task.c}€</td>
+                        <td>{task.du}</td>
+                        <td>TODO</td>
+                        <td>{task.c}</td>
+                        <td>{task.du * task.c}</td>
                         <td>
                             <button
                                 class="button"
@@ -144,6 +153,7 @@
                             bind:value={new_task.du}
                         /></td
                     >
+                    <td>TODO (string unité m2, litre)</td>
                     <td
                         ><input
                             type="number"
@@ -166,15 +176,10 @@
             </tbody>
         </table>
     </div>
-    <div class="mt-30">
-        <table>
-            <thead>
-                <tr>
-                    <th>Total (€)</th>
-                    <td>{total}€</td>
-                </tr>
-            </thead>
-        </table>
+     <br />
+    <br />
+    <div class="mt-5 ta-right">
+        <p><b>TOTAL : {total}€</b></p>
     </div>
     <div class="mt-30">
         <p class="bold">Note</p>
@@ -203,35 +208,45 @@
 </div>
 
 <div class="only_print visu_print">
+    <div class="mt-30 flex justify-content-space-between">
+        <div>
+            <p>{B != null ? B : "?"}</p>
+            <p>{H != null ? H : "?"}</p>
+            <p>N°SIRET : {J != null ? J : "?"}</p>
+            <p>{D}</p>
+        </div>
+        <div class="client">
+            <p>{C != null ? C : "?"}</p>
+            <p>{I != null ? I : "?"}</p>
+            <p>{K}</p>
+            <p>{L}</p>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
     <div class="mt-30">
         <p><b>Devis n°</b>{A != null ? A : "?"}</p>
     </div>
     <div class="mt-30">
         <p><b>Date :</b> {E}/{F > 9 ? F : "0" + F}/{G}</p>
-        <p><b>Validité :</b> {G2} mois</p>
+        <p><b>Validité :</b> {G2 != null ? G2 : "?"} mois</p>
         <p><b>Référence :</b> {X != null ? X : "?"}</p>
     </div>
-    <div class="mt-30 g-2">
-        <p class="bold">Entrepreneur</p>
-        <p class="bold">Client</p>
-        <p>{B != null ? B : "?"}</p>
-        <p>{C != null ? C : "?"}</p>
-        <p>{H != null ? H : "?"}</p>
-        <p>{I != null ? I : "?"}</p>
-        <p>N°SIRET : {J != null ? J : "?"}</p>
-        <p>{K}</p>
-        <p>{D}</p>
-        <p>{L}</p>
-    </div>
-
+    <br />
+    <br />
+    <br />
+    <br />
     <div class="mt-30">
         <table>
             <thead>
                 <tr>
-                    <th>Description</th>
-                    <th>Surface (m²)</th>
-                    <th>Coût surface (€/m²)</th>
-                    <th>Total (€)</th>
+                    <th>Désignation</th>
+                    <th>Quantité</th>
+                    <th>Unité</th>
+                    <th>Prix unitaire</th>
+                    <th>Montant</th>
                 </tr>
             </thead>
             <tbody>
@@ -241,11 +256,12 @@
                         <td>?</td>
                         <td>?</td>
                         <td>?</td>
+                        <td>?</td>
                     </tr>
                 {/if}
                 {#each tasks as task, i}
                     <tr>
-                        <td class="left"
+                        <td
                             >{#each task.de as d, j}
                                 {#if j == 0}
                                     <b>{d}</b>
@@ -254,26 +270,20 @@
                                 {/if}
                             {/each}</td
                         >
-                        <td>{task.du}m²</td>
-                        <td>{task.c}€/m²</td>
-                        <td>{task.du * task.c}€</td>
+                        <td>{task.du}</td>
+                        <td>TODO</td>
+                        <td>{task.c}</td>
+                        <td>{task.du * task.c}</td>
                     </tr>
                 {/each}
             </tbody>
         </table>
     </div>
-
-    <div class="mt-5">
-        <table>
-            <thead>
-                <tr>
-                    <th>Total (€)</th>
-                    <td>{total}€</td>
-                </tr>
-            </thead>
-        </table>
+    <br />
+    <br />
+    <div class="mt-5 ta-right">
+        <p><b>TOTAL : {total}€</b></p>
     </div>
-
     <div class="mt-30">
         <p class="bold">Note</p>
         <p>
@@ -350,6 +360,13 @@
         margin-left: auto;
         margin-right: auto;
     }
+    .client {
+        width: 40%;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
     input {
         text-align: center;
 
@@ -370,7 +387,16 @@
         padding: 5px;
     }
 
-    .left {
-        text-align: left;
+    table td {
+        text-align: right;
     }
+
+    table td:first-child {
+        text-align: left;
+        width: 50%;
+    }
+
+    /*.left {
+        text-align: left;
+    }*/
 </style>
