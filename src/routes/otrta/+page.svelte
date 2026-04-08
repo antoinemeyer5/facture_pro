@@ -82,11 +82,7 @@
     /* ###################################################################### */
 
     let totalTask = $derived(
-        (Math.round(
-            tasks.reduce((t, i) => t + (i.c2 as number) * (i.c4 as number), 0),
-        ) *
-            100) /
-            100,
+        tasks.reduce((t, i) => t + (i.c2 as number) * (i.c4 as number), 0)
     );
 </script>
 
