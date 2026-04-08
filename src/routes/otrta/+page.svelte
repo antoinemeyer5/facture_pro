@@ -193,10 +193,32 @@
     <!--#####################################################################-->
 
     <div>
-        <p>
-            <span class="bold">Date :</span>
-            {day}/{month > 9 ? month : "0" + month}/{year}
-        </p>
+        <div>
+            <div class="no_print">
+                <span class="bold">Date :</span>
+                <input
+                    type="number"
+                    placeholder="jour"
+                    bind:value={day}
+                />
+                <span>/</span>
+                <input
+                    type="number"
+                    placeholder="mois"
+                    bind:value={month}
+                />
+                <span>/</span>
+                <input
+                    type="number"
+                    placeholder="année"
+                    bind:value={year}
+                />
+            </div>
+            <span class="only_print">
+                <span class="bold">Date :</span>
+                {day > 9 ? day : "0" + day}/{month > 9 ? month : "0" + month}/{year}
+            </span>
+        </div>
         {#if D.type == "Devis"}
             <p>
                 <span class="bold">Validité :</span>
